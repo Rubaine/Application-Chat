@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: green;" stylesheets="@../util/chat-style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.rubaine.applichat.controller.ChatController">
+    <Label fx:id="serverInfoLabel" styleClass="serverInfoLabel" text="Serveur 1 - Connectés : 0" textFill="WHITE" />
+    <Button fx:id="disconnectButton" onAction="#onDisconnectButtonClick" alignment="CENTER" mnemonicParsing="false" text="Déconnecter">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+
+    <ListView fx:id="messageList" style="-fx-border-radius: 5px; -fx-border-width: 2px; -fx-border-color: green;">
+        <styleClass>
+            <String fx:value="messageList" />
+            <String fx:value="list-cell" />
+            <String fx:value="messageList" />
+            <String fx:value="text" />
+        </styleClass></ListView>
+    <TextField fx:id="messageField" promptText="Entrez un message..." style="-fx-border-radius: 5px; -fx-border-color: green;" styleClass="messageField" />
+    <Button onAction="#onSendButtonClick" styleClass="sendButton" text="Envoyer" />
+</VBox>

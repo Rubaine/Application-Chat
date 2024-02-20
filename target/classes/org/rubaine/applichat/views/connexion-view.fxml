@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="465.0" prefWidth="539.0" spacing="20.0" styleClass="connexion-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.rubaine.applichat.controller.ConnexionController">
+    <VBox alignment="CENTER" spacing="10.0" styleClass="label-text-box">
+        <TextField fx:id="pseudoField" promptText="Entrez votre pseudo" />
+    </VBox>
+    <Button onAction="#onConnectButtonClick" styleClass="button-connect" text="Connecter" />
+</VBox>
